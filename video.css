@@ -1,0 +1,14 @@
+.video-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;    /* Centra verticalmente (si hay espacio adicional) */
+    margin: 40px 0;        /* Espaciado superior e inferior */
+}
+
+.video-container iframe {
+    width: 80%;             /* Ancho del video, ajusta según sea necesario */
+    max-width: 800px;      /* Ancho máximo del video */
+    height: 450px;         /* Altura del video */
+    border-radius: 10px;   /* Bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para efecto de profundidad */
+}
