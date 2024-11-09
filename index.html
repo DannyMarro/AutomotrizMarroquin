@@ -6,32 +6,12 @@
     <title>Automotriz Marroquín</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Estilo para el reproductor de Spotify más pequeño */
+        /* Estilo para el reproductor de Spotify como un botón */
         #spotify-player {
             position: fixed;
-            top: 20px;
-            right: 20px;
-            width: 250px;  /* Tamaño más pequeño */
-            height: 250px; /* Tamaño más pequeño */
-            border-radius: 12px;
+            bottom: 20px;  /* Ubicado en la parte inferior */
+            left: 20px;  /* A la izquierda */
             z-index: 9999;
-        }
-
-        /* Estilo para el botón de pausa */
-        #pause-button {
-            position: fixed;
-            top: 270px;  /* Ajustado para estar debajo del reproductor más pequeño */
-            right: 20px;
-            background-color: #ff4444;
-            color: white;
-            padding: 8px 12px;  /* Botón más pequeño */
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        #pause-button:hover {
-            background-color: #cc0000;
         }
     </style>
 </head>
@@ -92,26 +72,11 @@
         <p>&copy; 2024 Automotriz Marroquín</p>
     </footer>
 
-    <!-- Reproductor de Spotify -->
-    <iframe id="spotify-player" src="https://open.spotify.com/embed/track/3o31P310cbEcnnGpxMHh2B?utm_source=generator" 
-            width="100%" height="100%" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+    <!-- Reproductor de Spotify como botón -->
+    <div id="spotify-player">
+        <iframe src="https://open.spotify.com/embed/track/3o31P310cbEcnnGpxMHh2B?utm_source=generator" 
+            width="50" height="50" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
             loading="lazy"></iframe>
-
-    <!-- Botón para pausar el reproductor -->
-    <button id="pause-button">Pausar Música</button>
-
-    <!-- Script para el botón de pausa -->
-    <script>
-        const pauseButton = document.getElementById('pause-button');
-        const spotifyPlayer = document.getElementById('spotify-player');
-
-        pauseButton.addEventListener('click', function() {
-            const iframe = document.querySelector('#spotify-player');
-            const iframeSrc = iframe.src;
-            iframe.src = '';
-            iframe.src = iframeSrc;
-        });
-    </script>
+    </div>
 </body>
 </html>
-
