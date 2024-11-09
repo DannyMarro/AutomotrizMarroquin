@@ -6,13 +6,13 @@
     <title>Automotriz Marroquín</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Estilo para el reproductor de Spotify */
+        /* Estilo para el reproductor de Spotify más pequeño */
         #spotify-player {
             position: fixed;
             top: 20px;
             right: 20px;
-            width: 300px;  /* Puedes ajustar el tamaño */
-            height: 380px; /* Puedes ajustar el tamaño */
+            width: 250px;  /* Tamaño más pequeño */
+            height: 250px; /* Tamaño más pequeño */
             border-radius: 12px;
             z-index: 9999;
         }
@@ -20,11 +20,11 @@
         /* Estilo para el botón de pausa */
         #pause-button {
             position: fixed;
-            top: 100px;  /* Justo debajo del reproductor */
+            top: 270px;  /* Ajustado para estar debajo del reproductor más pequeño */
             right: 20px;
             background-color: #ff4444;
             color: white;
-            padding: 10px 15px;
+            padding: 8px 12px;  /* Botón más pequeño */
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -94,7 +94,7 @@
 
     <!-- Reproductor de Spotify -->
     <iframe id="spotify-player" src="https://open.spotify.com/embed/track/3o31P310cbEcnnGpxMHh2B?utm_source=generator" 
-            width="100%" height="352" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+            width="100%" height="100%" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
             loading="lazy"></iframe>
 
     <!-- Botón para pausar el reproductor -->
