@@ -6,11 +6,14 @@
     <title>Automotriz Marroquín</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Estilo para el reproductor de Spotify como un botón */
+        /* Estilo para el reproductor de Spotify */
         #spotify-player {
             position: fixed;
             bottom: 20px;  /* Ubicado en la parte inferior */
-            left: 20px;  /* A la izquierda */
+            left: 20px;    /* A la izquierda */
+            width: 300px;  /* Tamaño razonable */
+            height: 80px;  /* Tamaño razonable */
+            border-radius: 12px;
             z-index: 9999;
         }
     </style>
@@ -72,11 +75,10 @@
         <p>&copy; 2024 Automotriz Marroquín</p>
     </footer>
 
-    <!-- Reproductor de Spotify como botón -->
-    <div id="spotify-player">
-        <iframe src="https://open.spotify.com/embed/track/3o31P310cbEcnnGpxMHh2B?utm_source=generator" 
-            width="50" height="50" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+    <!-- Reproductor de Spotify -->
+    <iframe id="spotify-player" src="https://open.spotify.com/embed/track/3o31P310cbEcnnGpxMHh2B?utm_source=generator" 
+            width="300" height="80" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
             loading="lazy"></iframe>
-    </div>
 </body>
 </html>
+
