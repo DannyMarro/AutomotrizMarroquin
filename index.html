@@ -5,6 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Automotriz Marroquín</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilo para el reproductor de Spotify */
+        #spotify-player {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 300px;  /* Puedes ajustar el tamaño */
+            height: 380px; /* Puedes ajustar el tamaño */
+            border-radius: 12px;
+            z-index: 9999;
+        }
+
+        /* Estilo para el botón de pausa */
+        #pause-button {
+            position: fixed;
+            top: 100px;  /* Justo debajo del reproductor */
+            right: 20px;
+            background-color: #ff4444;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #pause-button:hover {
+            background-color: #cc0000;
+        }
+    </style>
 </head>
 <body>
     <!-- Encabezado -->
@@ -22,24 +51,21 @@
     </section>
 
     <!-- Sección de Servicios -->
-<section id="servicios">
-    <h2>Servicios</h2>
-    <div class="servicio">
-        <img src="https://i.pinimg.com/control/564x/3a/93/93/3a9393f656f797ef0e32557205dd432d.jpg" alt="Servicio 1">
-        <a href="servicio1.html" target="_blank"><button>Servicio 1</button></a>
-    </div>
-    <div class="servicio">
-        <img src="https://i.pinimg.com/control/564x/04/e7/60/04e760a6531fc545b94bd64420466523.jpg" alt="Servicio 2">
-        <a href="servicio2.html" target="_blank"><button>Servicio 2</button></a>
-    </div>
-    <div class="servicio">
-        <img src="https://i.pinimg.com/control/564x/1d/50/3d/1d503d6a1ccc0842bc2030d95c1ec02a.jpg" alt="Servicio 3">
-        <a href="servicio3.html" target="_blank"><button>Servicio 3</button></a>
-    </div>
-</section>
-
-
-
+    <section id="servicios">
+        <h2>Servicios</h2>
+        <div class="servicio">
+            <img src="https://i.pinimg.com/control/564x/3a/93/93/3a9393f656f797ef0e32557205dd432d.jpg" alt="Servicio 1">
+            <a href="servicio1.html" target="_blank"><button>Servicio 1</button></a>
+        </div>
+        <div class="servicio">
+            <img src="https://i.pinimg.com/control/564x/04/e7/60/04e760a6531fc545b94bd64420466523.jpg" alt="Servicio 2">
+            <a href="servicio2.html" target="_blank"><button>Servicio 2</button></a>
+        </div>
+        <div class="servicio">
+            <img src="https://i.pinimg.com/control/564x/1d/50/3d/1d503d6a1ccc0842bc2030d95c1ec02a.jpg" alt="Servicio 3">
+            <a href="servicio3.html" target="_blank"><button>Servicio 3</button></a>
+        </div>
+    </section>
 
     <!-- Sección de Ofertas -->
     <section id="ofertas">
@@ -65,5 +91,27 @@
     <footer>
         <p>&copy; 2024 Automotriz Marroquín</p>
     </footer>
+
+    <!-- Reproductor de Spotify -->
+    <iframe id="spotify-player" src="https://open.spotify.com/embed/track/3o31P310cbEcnnGpxMHh2B?utm_source=generator" 
+            width="100%" height="352" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+            loading="lazy"></iframe>
+
+    <!-- Botón para pausar el reproductor -->
+    <button id="pause-button">Pausar Música</button>
+
+    <!-- Script para el botón de pausa -->
+    <script>
+        const pauseButton = document.getElementById('pause-button');
+        const spotifyPlayer = document.getElementById('spotify-player');
+
+        pauseButton.addEventListener('click', function() {
+            const iframe = document.querySelector('#spotify-player');
+            const iframeSrc = iframe.src;
+            iframe.src = '';
+            iframe.src = iframeSrc;
+        });
+    </script>
 </body>
 </html>
+
