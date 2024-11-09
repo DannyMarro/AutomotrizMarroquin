@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de Música</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #audio-player {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Reproductor de audio -->
+    <audio id="audio" src="https://open.spotify.com/intl-es/track/3o31P310cbEcnnGpxMHh2B?si=5f079df50ec44214" preload="auto"></audio>
+
+    <!-- Botón de reproducción/pausa -->
+    <button id="audio-player">Reproducir/Pausar Música</button>
+
+    <script>
+        const audio = document.getElementById('audio');
+        const button = document.getElementById('audio-player');
+
+        // Función para controlar la reproducción
+        button.addEventListener('click', function() {
+            if (audio.paused) {
+                audio.play();
+                button.textContent = "Pausar Música";
+            } else {
+                audio.pause();
+                button.textContent = "Reproducir Música";
+            }
+        });
+    </script>
+
+</body>
+</html>
