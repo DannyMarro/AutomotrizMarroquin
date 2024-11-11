@@ -9,12 +9,79 @@
         /* Estilo para el reproductor de Spotify */
         #spotify-player {
             position: fixed;
-            bottom: 20px;  /* Ubicado en la parte inferior */
-            left: 20px;    /* A la izquierda */
-            width: 300px;  /* Tamaño razonable */
-            height: 80px;  /* Tamaño razonable */
+            bottom: 20px;
+            left: 20px;
+            width: 300px;
+            height: 80px;
             border-radius: 12px;
             z-index: 9999;
+        }
+
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        /* Slider estilo sin imágenes */
+        .slider {
+            height: 200px;
+            background-color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        /* Servicios y Ofertas con diseño sin imágenes */
+        .servicio, .oferta {
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .servicio button, .oferta p {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Contacto */
+        #contacto {
+            background-color: #fafafa;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9em;
         }
     </style>
 </head>
@@ -27,9 +94,7 @@
     <!-- Sección de Inicio -->
     <section id="inicio">
         <div class="slider">
-            <img src="https://i.pinimg.com/564x/70/c5/d9/70c5d987970b843be650d5246e90b60e.jpg" alt="Auto 1">
-            <img src="https://i.pinimg.com/564x/20/78/5e/20785e4bf6a7b8d1df061ba6c05ad3a0.jpg" alt="Auto 2">
-            <img src="https://i.pinimg.com/564x/9a/41/ec/9a41ecabac7cda4b3b2edd1fb9defc82.jpg" alt="Auto 3">
+            Bienvenido a Automotriz Marroquín
         </div>
     </section>
 
@@ -37,15 +102,12 @@
     <section id="servicios">
         <h2>Servicios</h2>
         <div class="servicio">
-            <img src="https://i.pinimg.com/control/564x/3a/93/93/3a9393f656f797ef0e32557205dd432d.jpg" alt="Servicio 1">
             <a href="servicio1.html" target="_blank"><button>Servicio 1</button></a>
         </div>
         <div class="servicio">
-            <img src="https://i.pinimg.com/control/564x/04/e7/60/04e760a6531fc545b94bd64420466523.jpg" alt="Servicio 2">
             <a href="servicio2.html" target="_blank"><button>Servicio 2</button></a>
         </div>
         <div class="servicio">
-            <img src="https://i.pinimg.com/control/564x/1d/50/3d/1d503d6a1ccc0842bc2030d95c1ec02a.jpg" alt="Servicio 3">
             <a href="servicio3.html" target="_blank"><button>Servicio 3</button></a>
         </div>
     </section>
@@ -54,11 +116,9 @@
     <section id="ofertas">
         <h2>Ofertas</h2>
         <div class="oferta">
-            <img src="https://i.pinimg.com/control/564x/b8/2d/74/b82d74e5ac6d267e970319bc915b7726.jpg" alt="Oferta 1">
             <p>¡Oferta especial en alineación!</p>
         </div>
         <div class="oferta">
-            <img src="https://i.pinimg.com/control/564x/7a/52/24/7a52245be40d6d16e53df2ef5bb06108.jpg" alt="Oferta 2">
             <p>Cambio de aceite a precio especial</p>
         </div>
     </section>
@@ -81,4 +141,3 @@
             loading="lazy"></iframe>
 </body>
 </html>
-
